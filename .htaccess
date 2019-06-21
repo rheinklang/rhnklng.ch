@@ -1,0 +1,13 @@
+# Rewrite all requests to yourls-loader
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^.*$ /yourls-loader.php [L]
+</IfModule>
+# Rewrite all index calls to our main page
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_HOST} ^examp.le$
+    RewriteRule ^/?$ https://rheinklang-festival.ch [R=301,L]
+</IfModule>
