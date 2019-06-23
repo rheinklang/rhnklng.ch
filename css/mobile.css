@@ -1,0 +1,24 @@
+@media all and (max-width: 500px) {
+    #wrap {
+        max-width: 100%;
+        padding: 0;
+    }
+    #add-url {
+        width: 92%;
+    }
+    table.tblSorter {
+        overflow: auto;
+        display: block;
+    }
+    header {
+        display: none;
+    }
+    td.url {
+        max-width: 200px;
+        overflow: hidden
+    }
+    td.url > a {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
